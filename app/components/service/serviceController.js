@@ -269,6 +269,8 @@ function ($q, $scope, $stateParams, $state, $location, $anchorScroll, ServiceSer
   function initView() {
     $('#loadingViewSpinner').show();
 
+    $anchorScroll();
+
     ServiceService.service($stateParams.id)
     .then(function success(data) {
       var service = data;
